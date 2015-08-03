@@ -1,0 +1,38 @@
+{
+  "name": "havana-server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": {
+    "name": "Colin Meinke",
+    "email": "hello@colinmeinke.com",
+    "url": "colinmeinke.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/colinmeinke/havana-server.git"
+  },
+  "keywords": [
+    "es2015",
+    "havana",
+    "isomorphic",
+    "request",
+    "response",
+    "server"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "4.0.x",
+    "chai": "3.2.x",
+    "gulp": "3.9.x",
+    "gulp-babel": "5.1.x",
+    "gulp-concat": "2.6.x",
+    "gulp-eslint": "0.15.x",
+    "gulp-mocha": "2.1.x",
+    "havana-event": "0.1.x",
+    "node-fetch": "1.3.x"
+  }
+}
