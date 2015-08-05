@@ -1,6 +1,6 @@
 {
   "name": "havana-server",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A server-side request/response dispatcher",
   "main": "dist/server.js",
   "scripts": {

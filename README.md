@@ -55,19 +55,20 @@ or a library with an interchangeable API.
   received a request on the specified port, publishing
   the request data for consumption by response handlers.
 - `response.error`: Signifies that all registered response
-  handlers have failed to provide a response, and Havana
-  server will not take any further action.
+  handlers have failed to provide a response.
 
 ### Subscribe
 
 - `response.handler.register`: Allows a response handler to
-  notify Havana server that they will attempt to handle
+  notify Havana server that it will attempt to handle
   requests.
 - `response.handler.error`: Allows a response handler to
-  notify Havana server that they have not been able to
-  handle a request.
-- `response.send`: Allows a response handler to send a
-  response to Havana server.
+  notify Havana server that it has not been able to
+  handle the request.
+- `response.send`: Allows a response handler to notify
+  Havana server that it has handled the request
+  successfully, publishing the response data for consumption
+  by Havana server.
 
 ## ES2015+
 
