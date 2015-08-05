@@ -1,7 +1,7 @@
 {
   "name": "havana-server",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.1",
+  "description": "A server-side request/response dispatcher",
   "main": "dist/server.js",
   "scripts": {
     "test": "gulp test"

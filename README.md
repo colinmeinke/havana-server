@@ -21,8 +21,8 @@ npm install havana-server
 ## How to use
 
 ```javascript
-import Server from 'havana-server';
 import Event from 'havana-event';
+import Server from 'havana-server';
 
 const event = new Event();
 
