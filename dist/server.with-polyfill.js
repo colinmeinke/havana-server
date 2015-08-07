@@ -3765,9 +3765,11 @@ var Server = (function () {
   _createClass(Server, [{
     key: 'init',
     value: function init() {
-      var event = _.get(this).event;
-      var handlers = _.get(this).handlers;
-      var requests = _.get(this).requests;
+      var _$get = _.get(this);
+
+      var event = _$get.event;
+      var handlers = _$get.handlers;
+      var requests = _$get.requests;
 
       event.subscribe('response.handler.register', function (data) {
         handlers.push(data.name);
@@ -3805,10 +3807,12 @@ var Server = (function () {
     value: function listen(port) {
       var _this = this;
 
-      var event = _.get(this).event;
-      var reporting = _.get(this).reporting;
-      var requests = _.get(this).requests;
-      var server = _.get(this).server;
+      var _$get2 = _.get(this);
+
+      var event = _$get2.event;
+      var reporting = _$get2.reporting;
+      var requests = _$get2.requests;
+      var server = _$get2.server;
 
       if (!server) {
         _.get(this).server = _http2['default'].createServer(function (request, response) {
@@ -3845,15 +3849,17 @@ var Server = (function () {
   }, {
     key: 'close',
     value: function close() {
-      var event = _.get(this).event;
-      var requests = _.get(this).requests;
-      var server = _.get(this).server;
+      var _$get3 = _.get(this);
 
+      var event = _$get3.event;
+      var requests = _$get3.requests;
+      var server = _$get3.server;
       var _iteratorNormalCompletion = true;
       var _didIteratorError = false;
       var _iteratorError = undefined;
 
       try {
+
         for (var _iterator = requests.keys()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
           var id = _step.value;
 
