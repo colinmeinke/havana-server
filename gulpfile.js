@@ -1,8 +1,9 @@
 var babel = require( 'gulp-babel' );
-var concat = require( 'gulp-concat' );
 var gulp = require( 'gulp' );
+var insert = require( 'gulp-insert' );
 var lint = require( 'gulp-eslint' );
 var mocha = require( 'gulp-mocha' );
+var rename = require( 'gulp-rename' );
 
 gulp.task( 'lint', function () {
   return gulp.src([
@@ -31,12 +32,12 @@ gulp.task( 'compileTests', [ 'lint' ], function () {
 gulp.task( 'compile', [ 'compileCore', 'compileTests' ]);
 
 gulp.task( 'polyfill', [ 'compile' ], function () {
-  return gulp.src([
-    './node_modules/gulp-babel/node_modules/babel-core/browser-polyfill.js',
-    './dist/server.js',
-  ])
-  .pipe( concat( 'server.with-polyfill.js' ))
-  .pipe( gulp.dest( './dist' ));
+  return gulp.src( './dist/server.js' )
+    .pipe( insert.prepend( 'require(\'../node_modules/gulp-babel/node_modules/babel-core/polyfill.js\');\r\n\n' ))
+    .pipe( rename({
+      'suffix': '.with-polyfill',
+    }))
+    .pipe( gulp.dest( './dist' ));
 });
 
 gulp.task( 'test', function () {
@@ -44,4 +45,4 @@ gulp.task( 'test', function () {
     .pipe( mocha());
 });
 
-gulp.task( 'default', [ 'lint', 'compile', 'polyfill', 'test' ]);
+gulp.task( 'default', [ 'compile', 'polyfill' ]);
