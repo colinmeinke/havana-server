@@ -1,6 +1,7 @@
 # Havana server
 
 [![Build Status](https://travis-ci.org/colinmeinke/havana-server.svg?branch=master)](https://travis-ci.org/colinmeinke/havana-server)
+[![Dependency status](https://david-dm.org/colinmeinke/havana-server.svg)](https://david-dm.org/colinmeinke/havana-server.svg)
 
 A server-side request/response dispatcher.
 
