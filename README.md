@@ -1,5 +1,6 @@
 # Havana server
 
+[![NPM version](https://badge.fury.io/js/havana-server.svg)](http://badge.fury.io/js/havana-server)
 [![Build Status](https://travis-ci.org/colinmeinke/havana-server.svg?branch=master)](https://travis-ci.org/colinmeinke/havana-server)
 [![Dependency status](https://david-dm.org/colinmeinke/havana-server.svg)](https://david-dm.org/colinmeinke/havana-server.svg)
 
